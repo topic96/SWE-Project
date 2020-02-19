@@ -1,0 +1,43 @@
+<div class="example-container">
+    <div class="warning" *ngIf="createErrorText">
+        Niste popunili sva polja, niste izabrali rang novog naloga,
+        ili se lozinke ne poklapaju!
+    </div>
+  <div class="expandable">
+    <mat-form-field class="field">
+      <input matInput placeholder="Korisnicko ime" [(ngModel)]="korIme" required>
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <input matInput [(ngModel)]="lozinka" placeholder="Lozinka" type="password" required>
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <input matInput [(ngModel)]="lozinka2" placeholder="Ponovite lozinku" type="password" required>
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-form-field class="field">
+        <input matInput [(ngModel)]="ime" placeholder="Ime" required>
+    </mat-form-field>
+    <mat-form-field class="field">
+        <input matInput [(ngModel)]="prezime" placeholder="Prezime" required>
+    </mat-form-field>
+    <mat-form-field class="field">
+        <input matInput [(ngModel)]="adresa" placeholder="Adresa" required>
+    </mat-form-field>
+    <mat-form-field class="field">
+        <input matInput [matDatepicker]="picker" [(ngModel)]="datRodj" placeholder="Datum rodjenja" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-divider></mat-divider>
+  </div>
+    <mat-radio-group class="example-radio-group" [(ngModel)]="radg" required>
+        <mat-radio-button id="prvi" (click)="radioBool(0)" class="example-radio-button" ngDefaultControl>Ucenik</mat-radio-button>
+        <mat-radio-button id="drugi" (click)="radioBool(1)" class="example-radio-button" ngDefaultControl>Roditelj</mat-radio-button>
+        <mat-radio-button id="treci" (click)="radioBool(2)" class="example-radio-button" ngDefaultControl>Profesor</mat-radio-button>
+        <mat-radio-button id="cetvrti" (click)="radioBool(3)" class="example-radio-button" ngDefaultControl>Administrator</mat-radio-button>
+    </mat-radio-group>
+    <button mat-button (click)="reset()" id="btnDo" color="primary">Resetuj</button>
+    <button mat-button (click)="openDialog()" id="lastBtn" color="primary">Napravi</button>
+</div>

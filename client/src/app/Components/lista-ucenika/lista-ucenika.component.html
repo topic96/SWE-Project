@@ -1,0 +1,8 @@
+<div *ngIf="!showStudent" class="mainField">
+  <div class="student" (click)="selectStudent(dj.id)" *ngFor="let dj of djaci">
+   {{ dj.ime }} {{dj.prezime }}
+  </div>
+</div>
+<app-profesor-upis-ocene-napomene-izostanka *ngIf="showStudent"></app-profesor-upis-ocene-napomene-izostanka>
+<button *ngIf="!showStudent" id="btnBack" (click)="back()" mat-raised-button color="primary">Nazad</button>
+<button mat-raised-button *ngIf="!showStudent" id="lastBtn" (click)="izostanci()" color="primary">Upisite izostanke</button>

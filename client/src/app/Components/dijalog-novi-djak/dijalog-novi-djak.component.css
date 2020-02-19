@@ -1,0 +1,17 @@
+.selectOdeljenje{
+    width: 100%;
+    user-select: none;
+}
+
+.selectOdeljenje:hover{
+    background-color: lightgray;
+}
+
+#lastBtn{
+    float: right;
+}
+
+.selectedOdeljenje{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

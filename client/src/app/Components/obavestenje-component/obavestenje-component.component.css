@@ -1,0 +1,75 @@
+.obavestenjeContainter{
+    border: 1px black solid;
+    width: 80%;
+    background-color: white;
+    position: relative;
+    margin-top: 3%;
+    text-align: center;
+    margin-bottom: 2%;
+    --margin-left: 5%;
+}
+
+#lastBtn{
+    float: right;
+}
+
+.mainField{
+    width: 85%;
+    max-height: 550px;
+    overflow: auto;
+}
+
+/*.fieldContainer{
+    float: left;
+}*/
+
+/*.textField{
+    height: 100%;
+}*/
+
+.obavestenjeAutor, .obavestenjeTekst, .obavestenjeTema{
+    border-bottom: 1px solid black;
+}
+
+.obavestenjeAutor{
+    font-size: 20px;
+}
+
+.obavestenjeTema{
+    font-size: 20px;
+}
+
+.obavestenjeTekst{
+    font-size: 17px;
+}
+
+.iconContainer{
+    margin-left: 2%;
+    width: 5%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    margin-top: 3%;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.buttonField{
+    --margin-left: 4%;
+    margin-top: 3%;
+    width: 80%;
+}

@@ -1,0 +1,65 @@
+#lastBtn{
+    float: right;
+}
+
+.mainField{
+    width: 80%;
+    margin-top: 5%;
+    background-color: white;
+    max-height: 600px;
+    border-radius: 25px;
+}
+
+.odgField{
+    background-color: white;
+    border-radius: 25px;
+    margin-bottom: 2%;
+}
+
+.odgovoriField{
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 10%;
+    max-height: 400px;
+    overflow: auto;
+}
+
+#mainFont{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.center{
+    margin: auto;
+    width: 10%;
+    cursor: pointer;
+}
+
+.font{
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    word-break: break-all;
+}
+
+.btnField{
+    width: 80%;
+    margin-top: 1%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

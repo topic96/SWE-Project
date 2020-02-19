@@ -1,0 +1,27 @@
+<div class="mainField">
+    <p id="mainFont">{{ izabranaTema.tema }}</p>
+    <mat-divider></mat-divider>
+    <p class="font">{{ izabranaTema.autor.ime.licnoIme }} {{ izabranaTema.autor.ime.prezime }}</p>
+    <mat-divider></mat-divider>
+    <p class="font">{{ izabranaTema.tekst }}</p>
+    <p class="font">{{ izabranaTema.datumPostavljanja | date: "medium" }}</p>
+</div>
+<div class="odgovoriField">
+  <div class="odgField" *ngFor="let odg of odgovori">
+      <p class="font">{{ odg.autor.ime.licnoIme }} {{ odg.autor.ime.prezime }}</p>
+      <mat-divider></mat-divider>
+      <div class="font">{{ odg.tekst }}</div>
+      <mat-divider></mat-divider>
+      <p class="font">{{ odg.datumPostavljanja | date:"medium" }}</p>
+      <mat-divider *ngIf="parent.parent.userRang == 3"></mat-divider>
+      <div *ngIf="parent.parent.userRang == 3" class="center">
+        <i (click)="deleteObavestenjeOdgovor(odg._id)" class="material-icons">
+            highlight_off
+            </i>
+      </div> 
+  </div>
+</div>
+<div class="btnField">
+    <button mat-raised-button (click)="back()" color="primary">Nazad</button>
+    <button mat-raised-button id="lastBtn" color="primary" (click)="openDialog()">Odgovorite</button>
+</div>

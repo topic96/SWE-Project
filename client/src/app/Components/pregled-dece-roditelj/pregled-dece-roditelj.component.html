@@ -1,0 +1,19 @@
+<div class="mainField" *ngIf="showChildren">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let d of deca">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+             <p class="mainText"> {{ d.Ime }} {{ d.Prezime }} </p>
+            </mat-panel-title>
+            <mat-panel-description id="opis">
+              Povecajte za vise informacija
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>Razred: <p class="mainText">{{ d.Razred }}</p></div>
+          <div>Razredni staresina: <p class="mainText">{{ d.Razredni }}</p></div>
+          <div>Prosek u ovoj godini: <p class="mainText">{{ d.Prosek }}</p></div>
+          <button (click)="biraj(d.id)" mat-raised-button color="primary">Pogledaj</button>
+        </mat-expansion-panel>
+      </mat-accordion>
+</div>
+<app-dete-pregled *ngIf="!showChildren"></app-dete-pregled>

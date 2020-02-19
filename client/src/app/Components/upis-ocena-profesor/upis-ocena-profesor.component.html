@@ -1,0 +1,20 @@
+<div class="mainField">
+  <mat-accordion *ngIf="!showNext">
+    <mat-expansion-panel *ngFor="let f of godine">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Godina: {{ f.godina }}
+        </mat-panel-title>
+        <mat-panel-description>
+          Prosirite za vise podataka 
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div>
+        Broj odeljenja: {{ f.brOdeljenja }}
+      </div>
+      <button mat-raised-button (click)="choose(f.id)" color="primary">Izaberi</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<app-lista-odeljenja *ngIf="showNext"></app-lista-odeljenja>

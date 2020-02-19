@@ -1,0 +1,35 @@
+<div class="mainField" *ngIf="!viewP">
+    <div class="tableDiv">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+        <ng-container matColumnDef="Ime">
+          <th mat-header-cell *matHeaderCellDef> Ime </th>
+          <td mat-cell *matCellDef="let element; let i=index" (click)="selectStudent(element._id, i)"> {{element.ime.licnoIme}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="Prezime">
+          <th mat-header-cell *matHeaderCellDef> Prezime </th>
+          <td mat-cell *matCellDef="let element;let i=index" (click)="selectStudent(element._id, i)"> {{element.ime.prezime}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="Odeljenje">
+          <th mat-header-cell *matHeaderCellDef> Korisnicko ime </th>
+          <td mat-cell *matCellDef="let element; let i=index" (click)="selectStudent(element._id, i)"> {{element.userName}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="check">
+            <th mat-header-cell *matHeaderCellDef> Izaberite sa brisanje</th>
+            <td mat-cell *matCellDef="let element;"> 
+                <mat-checkbox (click)="empty(element._id)"></mat-checkbox>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row class="hoverable" *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+  <button *ngIf="!viewP" mat-raised-button id="dltBtn" (click)="delete()" disabled color="warn">Obrisi izabrane naloge</button>
+<button *ngIf="!viewP" mat-raised-button id="backBtn" (click)="back()" color="primary">Nazad</button>
+<app-change-admin-profile-admin *ngIf="viewP"></app-change-admin-profile-admin>

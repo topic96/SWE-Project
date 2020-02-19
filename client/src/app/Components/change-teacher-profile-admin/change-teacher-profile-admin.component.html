@@ -1,0 +1,49 @@
+<div class="mainField">
+  <div class="profileDataContent">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+          <input [(ngModel)]="profileData.Username" name="usrName" matInput placeholder="Korisnicko ime">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input [(ngModel)]="profileData.Ime" name="name" matInput placeholder="Ime">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input [(ngModel)]="profileData.Prezime" name="surname" matInput placeholder="Prezime">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input [(ngModel)]="profileData.Adresa" name="adress" matInput placeholder="Adresa">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input [(ngModel)]="profileData.Predmet" name="predmet" matInput placeholder="Predmet" disabled>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input matInput id="dtp" name="datum" [(ngModel)]="profileData.DatRodj" [matDatepicker]="picker" placeholder="Datum rodjenja">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </form>
+  </div>
+  <div *ngIf="profileData['predaje']" class="odeljenjaP">
+    <div class="head">Odeljenja kojima predaje</div>
+      <div class="classElem" *ngFor="let cl of profileData['predaje']">
+        {{ cl.broj }}
+        <div id="iconR"><i class="material-icons" (click)="delete(cl.id)">
+            remove_circle_outline
+            </i></div>
+            <mat-divider></mat-divider>
+      </div>
+  </div>
+  <div *ngIf="profileData['razredni']" class="odeljenjaP">
+    <div class="head">Razredno staresinstvo</div>
+      <div class="classElem"> {{ profileData['razredni'].broj }}
+          <div id="iconR"><i class="material-icons" (click)="deleteMain()">
+              remove_circle_outline
+              </i></div>
+        </div>
+  </div>
+      <button id="addClassBtn" (click)="addClass()" mat-button color="accent">Dodaj odeljenje</button>
+      <button id="addMainClassBtn" (click)="addMainClass()" mat-button color="accent">Dodaj staresinstvo</button>
+</div>
+<div class="btnContainer">
+  <button id="btnBack" mat-raised-button (click)="editData()" color="primary">Nazad</button>
+</div>

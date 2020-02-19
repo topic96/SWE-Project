@@ -1,0 +1,36 @@
+.mainBody{
+    margin-top: 5%;
+    width: 90%;
+    max-height: 500px;
+    overflow: auto;   
+}
+
+table{
+    width: 100%;
+}
+
+#newBtn{
+    margin-top: 3%;
+}
+
+#dltBtn{
+    margin-top: 3%;
+    margin-right: 10%;
+    float: right;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

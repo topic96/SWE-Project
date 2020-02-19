@@ -1,0 +1,17 @@
+<div class="fieldContainer">
+  <div class="example-container">
+    <mat-form-field>
+      <input [(ngModel)]="ime" name="ime" matInput placeholder="Ime">
+    </mat-form-field>
+    <mat-form-field>
+      <input [(ngModel)]="prezime" name="ime1" matInput placeholder="Prezime">
+    </mat-form-field>
+    <mat-form-field>
+      <input [(ngModel)]="adresa" name="ime2" matInput placeholder="Adresa">
+    </mat-form-field>
+  </div>
+</div>
+<div class="btnHolder">
+  <button mat-raised-button color="primary" (click)="back()">Otkazi</button>
+  <button mat-raised-button class="btnChange" (click)="submit()" color="primary">Izmeni</button>
+</div>

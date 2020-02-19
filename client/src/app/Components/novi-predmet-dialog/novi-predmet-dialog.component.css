@@ -1,0 +1,27 @@
+.mainBody{
+    width: 100%;
+}
+
+.example-full-width{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.errSite{
+    color: red;
+    width: 100%;
+    text-align: center;
+}
+
+textarea{
+    resize: none;
+    height: 75px;
+}
+
+button{
+    margin-top: 2%;
+}
+
+#saveBtn{
+    float: right;
+}

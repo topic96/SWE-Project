@@ -1,0 +1,9 @@
+table{
+    width: 100%;
+}
+
+.mainBody{
+    margin-top: 5%;
+    width: 90%;
+    user-select: none;
+}

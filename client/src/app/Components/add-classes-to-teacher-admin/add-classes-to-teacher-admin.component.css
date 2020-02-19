@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+}
+
+.tableField{
+    width: 100%;
+    user-select: none;
+    max-height: 400px;
+    overflow: auto;
+}
+
+#cancelBtn{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#lastBtn{
+    margin-top: 2%;
+    float: right;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

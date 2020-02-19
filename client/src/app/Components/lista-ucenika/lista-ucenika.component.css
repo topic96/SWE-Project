@@ -1,0 +1,47 @@
+.mainField{
+    width:80%;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.student{
+    width: 100%;
+    background-color: white;
+    font-size: 20px;
+    padding: 1%;
+    user-select: none;
+    border-bottom: 1px black solid;
+}
+
+.student:hover {
+    background-color: #888;
+}
+
+#btnBack{
+    margin-top: 3%;
+}
+
+#lastBtn{
+    margin-top: 3%;
+    float: right;
+    margin-right: 20%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

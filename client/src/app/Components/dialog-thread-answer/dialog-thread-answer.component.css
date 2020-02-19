@@ -1,0 +1,12 @@
+.example-full-width {
+    width: 100%;
+  }
+
+textarea{
+    resize: none;
+    max-height: 150px;
+}
+
+#lastBtn{
+    float: right;
+}

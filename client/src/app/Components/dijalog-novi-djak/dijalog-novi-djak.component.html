@@ -1,0 +1,8 @@
+<div class="mainField">
+    <mat-accordion>
+          <div (click)="fillData(o._id)" class="selectOdeljenje" *ngFor="let o of godine"> {{ o.naziv.godina }}-{{o.naziv.broj}} Broj djaka: {{ o.brojUcenika }} </div>
+      </mat-accordion>
+      <div class="selectedOdeljenje">Izabrano odeljenje: {{ data_object['_id'] }}</div>
+</div>
+<button mat-button (click)="cancel()" color="warn">Otkazi</button>
+<button mat-button (click)="choose()" id="lastBtn" color="warn">Sacuvaj</button>

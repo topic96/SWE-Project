@@ -1,0 +1,11 @@
+<app-obavestenje-component *ngIf="parent.showTest[0]"></app-obavestenje-component>
+<app-profile-view *ngIf="parent.showTest[1]"></app-profile-view>
+<app-nastava-ucenik *ngIf="parent.showTest[2]"></app-nastava-ucenik>
+<app-forum *ngIf="parent.showTest[4] && rang!=0"></app-forum>
+<app-pregled-ocena-iizostanaka-ucenik *ngIf="parent.showTest[3] && rang==0"></app-pregled-ocena-iizostanaka-ucenik>
+<app-pregled-dece-roditelj *ngIf="parent.showTest[3] && rang==1"></app-pregled-dece-roditelj>
+<app-upis-ocena-profesor *ngIf="parent.showTest[5]"></app-upis-ocena-profesor>
+<app-dodavanje-profila *ngIf="parent.showTest[7]"></app-dodavanje-profila>
+<app-pibprofila *ngIf="parent.showTest[6]"></app-pibprofila>
+<app-predmeti-admin *ngIf="parent.showTest[8]"></app-predmeti-admin>
+<app-odeljenja-admin *ngIf="parent.showTest[9]"></app-odeljenja-admin>

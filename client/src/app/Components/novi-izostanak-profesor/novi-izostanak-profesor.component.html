@@ -1,0 +1,7 @@
+<div class="mainField">
+    <div class="cont" *ngFor="let d of data">
+        <mat-checkbox (click)="add(d.id)" class="example-margin">{{ d.ime }} {{ d.prezime }}</mat-checkbox>
+    </div>
+</div>
+<button mat-button (click)="back()" id="btnBack" color="primary">Otkazi</button>
+<button mat-button (click)="upisi()" id="lastBtn" color="primary">Upisi</button>

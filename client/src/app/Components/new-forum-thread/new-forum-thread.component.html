@@ -1,0 +1,15 @@
+<div class="formContainer">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input [(ngModel)]="tema" name="tema" matInput placeholder="Tema obavestenja">
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+        <textarea [(ngModel)]="textTeme" name="text" matInput placeholder="Tekst"></textarea>
+      </mat-form-field>
+    </form>
+</div>    
+<div class="btnField">
+  <button mat-raised-button (click)="back()" color="primary">Otkazi</button>
+  <button mat-raised-button (click)="post()" id="lastBtn" color="primary">Postavi</button>
+</div>

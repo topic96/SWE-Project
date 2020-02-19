@@ -1,0 +1,12 @@
+<mat-chip-list class="mat-chip-list-stacked">
+  <div class="mainField">
+    <mat-chip selected (click)="odaberiOcenu(1)" [color]="primary">1</mat-chip>
+    <mat-chip selected (click)="odaberiOcenu(2)" [color]="primary">2</mat-chip>
+    <mat-chip selected (click)="odaberiOcenu(3)" [color]="primary">3</mat-chip>
+    <mat-chip selected (click)="odaberiOcenu(4)" [color]="primary">4</mat-chip>
+    <mat-chip selected (click)="odaberiOcenu(5)" [color]="primary">5</mat-chip>
+  </div>
+</mat-chip-list>
+<p>Izabrana ocena: {{ocenaZaUpis}}</p>
+<button mat-button (click)="cancel()" color="primary">Otkazi</button>
+<button mat-button (click)="upisi()" id="lastBtn" color="primary">Upisi</button>

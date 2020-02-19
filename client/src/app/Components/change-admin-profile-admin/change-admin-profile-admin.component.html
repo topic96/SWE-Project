@@ -1,0 +1,27 @@
+<div class="mainField">
+    <div class="profileDataContent">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input [(ngModel)]="profileData.userName" name="userName" matInput placeholder="Korisnicko ime">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input [(ngModel)]="profileData.ime.licnoIme" name="name" matInput placeholder="Ime">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input [(ngModel)]="profileData.ime.prezime" name="surname" matInput placeholder="Prezime">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input [(ngModel)]="profileData.adresaStanovanja.ulica" name="adress" matInput placeholder="Adresa">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput id="dtp" name="datum" [(ngModel)]="profileData.datumRodjenja" [matDatepicker]="picker" placeholder="Datum rodjenja">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="btnContainer">
+      <button id="btnBack" mat-raised-button (click)="editData()" color="primary">Nazad</button>
+      <button id="btnOk" mat-raised-button (click)="saveData()" color="primary">Potvrdi</button>
+    </div>
+  </div>

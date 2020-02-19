@@ -1,0 +1,23 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" class="sidenav-content">
+    <h2>ePortal</h2>
+    <button mat-button (click)="parent.changeView(0);sidenav.toggle()">Pocetna</button>
+    <button mat-button (click)="parent.changeView(1);sidenav.toggle()">Profil</button>
+    <button mat-button *ngIf="rangUsera==0" (click)="parent.changeView(2);sidenav.toggle()">Nastava</button>
+    <button mat-button *ngIf="rangUsera!=3" (click)="parent.changeView(10);sidenav.toggle()">Ocene/Izostanci</button>
+    <button mat-button *ngIf="rangUsera!=0" (click)="parent.changeView(4);sidenav.toggle()">Forum</button>
+    <!--Samo admin-->
+    <button mat-button *ngIf="rangUsera==3" (click)="parent.changeView(6);sidenav.toggle()">Izmena profila</button>
+    <button mat-button *ngIf="rangUsera==3" (click)="parent.changeView(7);sidenav.toggle()">Dodavanje profila</button>
+    <button mat-button *ngIf="rangUsera==3" (click)="parent.changeView(8);sidenav.toggle()">Predmeti</button>
+    <button mat-button *ngIf="rangUsera==3" (click)="parent.changeView(9);sidenav.toggle()">Odeljenja</button>
+    <!--Svi-->
+    <button mat-button (click)="logOut()">Odjavi se</button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-icon class="menuIcon" (click)="sidenav.toggle()">menu</mat-icon>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

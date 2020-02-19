@@ -1,0 +1,14 @@
+<div class="mainBody">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Naziv predmeta" name="naziv" [(ngModel)]="nazivPredmeta">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <textarea name="opis" [(ngModel)]="opisPredmeta" matInput placeholder="Opis"></textarea>
+    </mat-form-field>
+    <div *ngIf="showErr" class="errSite">
+      Niste popunili sva polja!
+    </div>
+    <button (click)="back()" mat-raised-button color="primary">Otkazi</button>
+    <button (click)="save()" id="saveBtn" mat-raised-button color="primary">Zapamti</button>
+</div>

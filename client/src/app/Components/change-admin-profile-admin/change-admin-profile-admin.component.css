@@ -1,0 +1,39 @@
+.profileDataContent{
+    background-color: white;
+    width: 100%;
+    user-select: none;
+    margin-top: 3%;
+}
+
+.mainField{
+    margin-top: 5%;
+    width: 90%;
+    background-color: white;
+}
+
+#dtp, #btnBack{
+    margin-bottom: 3%;
+}
+
+#btnOk{
+    margin-bottom: 3%;
+    float: right;
+}
+
+.example-form{
+    width: 100%;
+    --background-color: white;
+}
+
+.example-full-width{
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.btnContainer{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+}

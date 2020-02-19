@@ -1,0 +1,21 @@
+<div class="mainField">
+  <mat-accordion *ngIf="!showOdeljenje">
+    <mat-expansion-panel *ngFor="let o of odeljenjaData">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Razred: {{ o.Razred }}
+        </mat-panel-title>
+        <mat-panel-description>
+          Prosirite za vise podataka 
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div>
+        Broj djaka: {{ o.brojDjaka }}
+      </div>
+      <button mat-raised-button (click)="choose(o.id)" color="primary">Izaberi</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<app-lista-ucenika *ngIf="showOdeljenje"></app-lista-ucenika>
+<button mat-raised-button id="btnBack" *ngIf="!showOdeljenje" (click)="back()" color="primary">Nazad</button>

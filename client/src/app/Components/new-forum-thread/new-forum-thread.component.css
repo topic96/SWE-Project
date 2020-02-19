@@ -1,0 +1,29 @@
+.example-form {
+    width: 100%;
+    margin-left: 5%;
+  }
+  
+  .example-full-width {
+    width: 85%;
+    max-height: 600px;
+  }
+
+  textarea{
+    resize: none;
+    max-height: 300px;
+  }
+
+  #lastBtn{
+    float: right;
+  }
+
+  .formContainer{
+      width: 80%;
+      background-color: white;
+      margin-top: 5%;
+  }
+
+  .btnField{
+    width: 80%;
+    margin-top: 5%;
+  }

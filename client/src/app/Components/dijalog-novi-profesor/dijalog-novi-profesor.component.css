@@ -1,0 +1,82 @@
+.mainField{
+    width: 100%;
+}
+
+#lastBtn{
+    float: right;
+}
+
+.dialogBtn{
+    margin-top: 2%;
+}
+
+table {
+    width: 100%;
+    user-select: none;
+}
+
+#head{
+    text-align: center;
+}
+
+.selectField{
+    width:80%;
+    margin-left: 10%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.cBox{
+    width: 100%;
+    text-align: center;
+    float: left;
+    margin-top: 2%;
+    user-select: none;
+}
+
+#warningId{
+    text-align: center;
+    color: red;
+    font-size: 15px;
+}
+
+.hiddenDiv{
+    display: none;
+}
+
+#rTable{ /*donja tabela, za biranje razrednog*/
+    max-height: 200px;
+    overflow: auto;
+}
+
+.notHiddenDiv{
+    max-height: 200px;
+    overflow: auto;
+    display: inherit;
+    --margin-right: 50%;
+    z-index: 3;
+}
+
+.tableField{
+    max-height: 200px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

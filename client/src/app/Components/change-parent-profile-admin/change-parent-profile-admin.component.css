@@ -1,0 +1,47 @@
+.example-form {
+    width: 100%;
+}
+  
+.example-full-width {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.listField{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    user-select: none;
+    font-size: 20px;
+
+}
+
+#addBtn{
+    width: 100%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.material-icons{
+    cursor: pointer;
+}
+
+#iconR{
+    float: right;
+}
+
+#hint{
+    margin-left:5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mainField{
+    width: 90%;
+    margin-top: 5%;
+    background-color: white;
+}
+
+#backBtn{
+    margin-top: 3%;
+}

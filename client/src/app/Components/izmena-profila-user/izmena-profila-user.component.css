@@ -1,0 +1,30 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 5%;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .fieldContainer{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 60%;
+    background-color: white; 
+  }
+
+  .btnHolder{
+    --width: 100%;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 60%;
+    --background-color: white;
+  }
+
+  .btnChange{
+    --margin-left:90%;
+    float: right;
+  }

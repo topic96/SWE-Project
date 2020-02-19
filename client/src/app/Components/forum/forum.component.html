@@ -1,0 +1,22 @@
+<div class="mainField" *ngIf="showForum==0">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let forumTema of teme">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ forumTema.tema }}
+            </mat-panel-title>
+            <mat-panel-description id="opis">
+              Povecajte za vise informacija
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>Autor: <p class="font">{{ forumTema.autor.ime.licnoIme }} {{ forumTema.autor.ime.prezime }}</p></div>
+          <div>Datum postavljanja: <p class="font">{{ forumTema.datumPostavljanja | date:"medium" }}</p></div>
+          <div>Broj odgovora: <p class="font">{{ forumTema.brojOdgovora }}</p></div>
+          <button (click)="biraj(forumTema._id)" mat-raised-button color="primary">Pogledaj</button>
+          <button *ngIf="parent.userRang == 3" class="dltBtn" (click)="obirisiObavestenje(forumTema._id)" mat-raised-button color="warn">Obrisi</button>
+        </mat-expansion-panel>
+      </mat-accordion>
+</div>
+<button mat-raised-button class="btnNew" (click)="newThread()" color="primary" *ngIf="showForum==0">Pokrenite novu temu</button>
+<app-new-forum-thread *ngIf="showForum==2"></app-new-forum-thread>
+<app-forum-thread-view *ngIf="showForum==1"></app-forum-thread-view>

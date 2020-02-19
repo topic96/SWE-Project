@@ -1,0 +1,18 @@
+<div class="mainField">
+  <h1>Nova napomena</h1>
+  <mat-form-field>
+      <mat-select placeholder="Razlog napomene" [(value)]="izabranRazlog.razlog">
+          <mat-option value="Nedolicno ponasanje">Nedolicno ponasanje</mat-option>
+          <mat-option value="Nepostovanje profesora">Nepostovanje profesora</mat-option>
+          <mat-option value="Nezainteresovanost">Nezainteresovanost</mat-option>
+          <mat-option value="Ometanje nastave">Ometanje nastave</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="izabranRazlog.datum" placeholder="Datum napomene">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+</div>
+<button mat-button (click)="back()" color="primary">Otkazi</button>
+<button mat-button (click)="napisiNapomenu()" id="lastBtn" color="primary">Upisi</button>

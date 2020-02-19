@@ -1,0 +1,8 @@
+<div>
+    <h1>Unesite Vas odgovor:</h1>
+    <mat-form-field class="example-full-width">
+        <textarea [(ngModel)]="odgovor" name="odg" matInput placeholder="Napisite odgovor"></textarea>
+    </mat-form-field>
+    <button mat-raised-button (click)="cancel()" color="primary">Otkazi</button>
+    <button mat-raised-button (click)="answer()" id="lastBtn" color="primary">Prosledi odgovor</button>
+</div>

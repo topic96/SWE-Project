@@ -1,0 +1,67 @@
+<mat-card class="example-card" *ngIf="showPath" (click)="selectedI()">
+    <mat-card-header>
+      <mat-card-title>Izostanci</mat-card-title>
+      <mat-card-subtitle>Pogledajte svoje izostanke</mat-card-subtitle>
+    </mat-card-header>
+    <div class="imgDiv"></div>
+    <mat-card-content>
+      <p>
+        Pogledajte tabelu sa svim Vasim izostancima.
+      </p>
+    </mat-card-content>
+</mat-card>
+<mat-card id="leftCard" class="example-card" *ngIf="showPath" (click)="selectedN()">
+      <mat-card-header>
+        <mat-card-title>Napomene</mat-card-title>
+        <mat-card-subtitle>Pogledajte svoje napomene</mat-card-subtitle>
+      </mat-card-header>
+      <div class="imgDiv1"></div>
+      <mat-card-content>
+        <p>
+          Pogledajte tabelu sa svim Vasim napomenama.
+        </p>
+    </mat-card-content>
+</mat-card>
+<div class="ITable" *ngIf="showI">
+    <table mat-table [dataSource]="sviIzostanci" class="mat-elevation-z8">
+        <ng-container matColumnDef="Datum">
+          <th mat-header-cell *matHeaderCellDef> Datum upisa </th>
+          <td mat-cell *matCellDef="let sviIzostanci"> {{ sviIzostanci.datum }} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="Opravdan">
+          <th mat-header-cell *matHeaderCellDef> Da li je opravdan </th>
+          <td mat-cell *matCellDef="let sviIzostanci"> {{ sviIzostanci.opravdan }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Predmet">
+          <th mat-header-cell *matHeaderCellDef> Napisan na casu iz </th>
+          <td mat-cell *matCellDef="let sviIzostanci"> {{ sviIzostanci.predmet }} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+<div class="NTable" *ngIf="showN">
+    <table mat-table [dataSource]="sveNapomene" class="mat-elevation-z8">
+          <ng-container matColumnDef="Datum">
+            <th mat-header-cell *matHeaderCellDef> Datum upisa </th>
+            <td mat-cell *matCellDef="let sveNapomene"> {{ sveNapomene.datum }} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="Razlog">
+            <th mat-header-cell *matHeaderCellDef> Razlog napomene </th>
+            <td mat-cell *matCellDef="let sveNapomene"> {{ sveNapomene.razlog }} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="Predmet">
+            <th mat-header-cell *matHeaderCellDef> Napisana na casu iz </th>
+            <td mat-cell *matCellDef="let sveNapomene"> {{ sveNapomene.predmet }} </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+    </table>
+</div>
+<button id="btnBack" (click)="back()" mat-raised-button color="primary">Nazad</button>

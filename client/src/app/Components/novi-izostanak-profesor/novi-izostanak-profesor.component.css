@@ -1,0 +1,35 @@
+#btnBack{
+    margin-top: 3%;
+}
+
+#lastBtn{
+    margin-top: 3%;
+    float: right;
+}
+
+.mainField{
+    margin-top: 5%;
+    width: 80%;
+    max-height: 250px;
+    overflow: auto;
+}
+
+.cont{
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

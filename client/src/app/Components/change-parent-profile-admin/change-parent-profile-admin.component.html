@@ -1,0 +1,31 @@
+<div class="mainField">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Korisnicko ime" name="usrn" [(ngModel)]="profileData.userN">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Ime" name="ime" [(ngModel)]="profileData.name">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Prezime" name="prezime" [(ngModel)]="profileData.surname">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Adresa" name="adresa" [(ngModel)]="profileData.adress">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input matInput name="datRodj" [(ngModel)]="profileData.datRodj" [matDatepicker]="picker" placeholder="Datum rodjenja">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </form>
+    <p id="hint">Deca:</p>
+    <div class="listField" *ngFor="let ch of profileChildren">
+        {{ ch.ime }} {{ ch.Prezime }} Odeljenje: {{ ch.Odeljenje }}
+      <div id="iconR"><i class="material-icons" (click)="delete(ch.id)">
+          remove_circle_outline
+          </i></div>
+      <mat-divider></mat-divider>
+    </div> 
+    <button id="addBtn" mat-button (click)="addChild()" color="warn">Dodaj dete</button>
+</div>
+<button id="backBtn" (click)="back()" mat-raised-button color="primary">Nazad</button>

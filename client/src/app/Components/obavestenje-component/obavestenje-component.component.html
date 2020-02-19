@@ -1,0 +1,34 @@
+<div class="mainField" *ngIf="!novoObavestenjeTest">
+    <div *ngFor="let x of obavestenjaList" class="obavestenjeContainter">
+        <div class="obavestenjeAutor">
+            <i class="material-icons">
+                assignment_ind
+            </i>
+            <div>{{  x.ProfObavestava.ime.licnoIme }} {{  x.ProfObavestava.ime.prezime }}</div>
+        </div>
+        <div class="obavestenjeTema">
+            <i class="material-icons">
+                    assignment_ind
+                </i>
+                <div>{{ x.nazivObavestenja }}</div>
+        </div>
+        <div class="obavestenjeTekst">
+            <i class="material-icons">
+                description
+            </i>
+            <div>{{ x.bodyObavestenje }}</div>
+        </div>
+        <div class="obavestenjeDate">
+            <i class="material-icons">
+                access_time
+            </i>
+            <div>{{ x.datumPostavljanja | date:'medium' }}</div>
+        </div>
+    </div> 
+</div>
+<app-novo-obavestenje *ngIf="novoObavestenjeTest"></app-novo-obavestenje>
+<div class="buttonField">
+    <button mat-raised-button (click)="novoObavestenje()" *ngIf="!novoObavestenjeTest && (rang==2 || rang==3)" color="primary">Napisite novo obavestenje</button>
+    <button mat-raised-button (click)="novoObavestenje()" *ngIf="novoObavestenjeTest" color="primary">Otkazi</button>
+    <button mat-raised-button id="lastBtn" (click)="novoObavestenje()" *ngIf="novoObavestenjeTest" color="primary">Posalji</button>
+</div>

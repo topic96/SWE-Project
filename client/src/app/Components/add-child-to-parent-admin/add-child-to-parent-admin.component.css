@@ -1,0 +1,29 @@
+#lastBtn{
+    float: right;
+}
+
+.mainField{
+    width: 100%;
+    user-select: none;
+}
+
+.listCont{
+    width:90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+.selectableElem:hover{
+    background-color: #888;
+}
+
+.btn{
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+#tekst{
+    margin-left: 5%;
+    margin-top: 5%;
+}

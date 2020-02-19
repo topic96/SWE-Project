@@ -1,0 +1,32 @@
+<div class="headText">Biranje odeljenja koje vec ima razrednog staresinu ce tog
+  staresinu razresiti duznosti!
+</div>
+<div class="tableField">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+      <ng-container matColumnDef="ime">
+        <th mat-header-cell *matHeaderCellDef> Odeljenje </th>
+        <td mat-cell *matCellDef="let element" (click)="select(element.id);"> {{element.ime}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="brojDjaka">
+        <th mat-header-cell *matHeaderCellDef> Broj djaka </th>
+        <td mat-cell *matCellDef="let element" (click)="select(element.id);"> {{element.brojDjaka}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="razredni">
+        <th mat-header-cell *matHeaderCellDef> Razredni staresina </th>
+        <td mat-cell *matCellDef="let element" (click)="select(element.id);"> {{element.razredni}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+          (click)="selection.toggle(row)">
+      </tr>
+  </table>
+</div>
+  <div *ngIf="selectedData" class="selectedObject">
+    Izabrano odeljenje: {{selectedData['ime']}}
+  </div>
+  <button id="cancelBtn" (click)="cancel()" mat-button color="warn">Otkazi</button>
+  <button id="lastBtn" (click)="save()" mat-button color="warn">Sacuvaj</button>

@@ -1,0 +1,11 @@
+.rSide{
+    float: right;
+    width: 60%;
+    height: 100%;
+}
+
+.lSide{
+    float: left;
+    width: 30%;
+    height: 100%;
+}

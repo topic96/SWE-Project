@@ -1,0 +1,30 @@
+<div class="mainField" *ngIf="showCard">
+<mat-card class="example-card" (click)="oceneShow()">
+    <mat-card-header>
+      <mat-card-title>Ocene</mat-card-title>
+      <mat-card-subtitle>Pogledajte ocene svog deteta</mat-card-subtitle>
+    </mat-card-header>
+    <div class="imgDiv"></div>
+    <mat-card-content>
+      <p>
+        Pogledajte tabelu sa svim predmetima koje Vase dete pohadja i ocene koje 
+        Vase dete ima iz tih predmeta.
+      </p>
+    </mat-card-content>
+</mat-card>
+<mat-card id="leftCard" class="example-card" (click)="napomeneShow()">
+    <mat-card-header>
+      <mat-card-title>Izostanci</mat-card-title>
+      <mat-card-subtitle>Pogledajte izostanke svog deteta</mat-card-subtitle>
+    </mat-card-header>
+    <div class="imgDiv1"></div>
+    <mat-card-content>
+      <p>
+        Pogledajte sve izostanke kao i napomene koje su pripisane Vasem detetu.
+      </p>
+    </mat-card-content>
+</mat-card>
+<button mat-raised-button id="backBtn" (click)="back()" color="primary">Nazad</button>
+</div>
+<app-pregled-ocena *ngIf="oceneTest"></app-pregled-ocena>
+<app-pregled-izostanaka *ngIf="napomeneTest"></app-pregled-izostanaka>

@@ -1,0 +1,12 @@
+<div class="mainField">
+  <div class="listCont">
+    <div class="selectableElem" *ngFor="let ch of childrenList" (click)="select(ch)">
+        {{ch.ime}} {{ch.prezime}} Odeljenje: {{ch.odeljenje}}
+    </div>
+  </div>
+  <div id="tekst" *ngIf="selected">
+    Izabrano dete: {{selected['ime']}} {{selected['prezime']}}
+  </div>
+</div>
+<button class="btn" mat-button (click)="cancel()" color="warn">Otkazi</button>
+<button class="btn" id="lastBtn" (click)="done()" mat-button color="warn">Izaberi</button>

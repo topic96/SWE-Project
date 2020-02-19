@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+  }
+  
+  tr.mat-footer-row {
+    font-weight: bold;
+  }
+
+  .mat-elevation-z8{
+    width: 70%;
+    margin-top: 5%;
+    user-select: none;
+  }
+
+  #backBtn{
+    margin-top:2%;
+  }

@@ -1,0 +1,41 @@
+<h2 class="appLogo">eDnevnik portal</h2>
+<div class="example-container">
+    <mat-form-field [floatLabel]="'never'" class="inputField">
+        <i matPrefix class="material-icons">
+            face
+        </i>
+        <input matInput placeholder="Korisnicko ime" [(ngModel)]="usrName">
+        <button mat-button *ngIf="usrName" matSuffix mat-icon-button aria-label="Clear" (click)="usrName=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field [floatLabel]="'never'" class="inputField">
+        <i matPrefix class="material-icons">
+            fingerprint
+        </i>
+        <input matInput placeholder="Lozinka" [(ngModel)]="paswr" type="password">
+        <button mat-button *ngIf="paswr" matSuffix mat-icon-button aria-label="Clear" (click)="paswr=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field class="inputField">
+        <i matPrefix class="material-icons">
+            grade
+        </i>
+        <mat-select [(value)]="rang" id="Role" placeholder="Rang korisnika">
+            <mat-option value="0">Ucenik</mat-option>
+            <mat-option value="1">Roditelj</mat-option>
+            <mat-option value="2">Profesor</mat-option>
+            <mat-option value="3">Administrator</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div *ngIf="logInFailed" class="logInError">
+        <i class="material-icons">
+            report_problem
+        </i>
+        Morate uneti ispravne podatke!
+    </div>
+    <button class="btn btn-primary" id="logInBtn" (click)="logInClick()" mat-raised-button color="primary">Ulogujte se</button>
+</div>

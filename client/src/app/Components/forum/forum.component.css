@@ -1,0 +1,21 @@
+.mainField{
+    background-color: white;
+    width: 80%;
+    margin-top: 5%;
+}
+
+.font{
+    font-size: 20px;
+}
+
+.btnNew{
+    margin-top: 2%;
+}
+
+.dltBtn{
+    float: right;
+}
+
+#opis{
+    user-select: none;
+}

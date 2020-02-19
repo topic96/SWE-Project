@@ -1,0 +1,29 @@
+.profileDataContent {
+  margin-top: 5%;
+  margin-left: 5%;
+  border: 1px solid black;
+  background-color: white;
+  width: 60%;
+  border-radius: 7px;
+}
+
+.textSite {
+  font-size: 20px;
+  width: 50%;
+}
+
+.btnContainer {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 60%;
+}
+
+.dataSite {
+  font-size: 20px;
+  text-align: right;
+  float: right;
+}
+/* .dataSite,
+.textSite {
+  padding: 40px;
+} */

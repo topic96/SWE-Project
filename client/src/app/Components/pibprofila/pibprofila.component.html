@@ -1,0 +1,10 @@
+<div class="mainField" *ngIf="show">
+    <button mat-raised-button (click)="getStudent()" class="chooseBtn" color="primary">Ucenicki nalozi</button>
+    <button mat-raised-button (click)="getParent()" class="chooseBtn" color="primary">Roditeljski nalozi</button>
+    <button mat-raised-button (click)="getTeacher()" class="chooseBtn" color="primary">Profesorski nalozi</button>
+    <button mat-raised-button (click)="getAdmin()" class="chooseBtn" color="primary">Administratorski nalozi</button>
+</div>
+<app-pibstudent *ngIf="showS"></app-pibstudent>
+<app-pibparent *ngIf="showP"></app-pibparent>
+<app-pibteacher *ngIf="showT"></app-pibteacher>
+<app-pibadmin *ngIf="showA"></app-pibadmin>

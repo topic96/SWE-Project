@@ -1,0 +1,87 @@
+.profileDataContent{
+    background-color: white;
+    width: 100%;
+    user-select: none;
+    margin-top: 3%;
+}
+
+.mainField{
+    margin-top: 5%;
+    width: 90%;
+    background-color: white;
+    overflow: auto;
+    max-height: 520px;
+}
+
+#dtp, #btnBack{
+    margin-bottom: 3%;
+}
+
+.example-form{
+    width: 100%;
+    --background-color: white;
+}
+
+.example-full-width{
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.btnContainer{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+}
+
+.odeljenjaP{
+    width: 90%;
+    margin-left: 5%;
+    border: 0.5px solid grey;
+    float: left;
+    margin-bottom: 3%;
+    user-select: none;
+}
+
+.head{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.classElem{
+    font-size: 20px;
+    width: 100%;
+    float: left;
+}
+
+#addClassBtn{
+    margin-bottom: 3%;
+    margin-left: 5%;
+}
+
+#addMainClassBtn{
+    float: right;
+    margin-right: 5%;
+}
+
+#iconR{
+    float: right;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

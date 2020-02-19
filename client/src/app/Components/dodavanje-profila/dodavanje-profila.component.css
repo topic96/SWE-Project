@@ -1,0 +1,71 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 5%;
+    background-color: white;
+}
+
+.warning{
+    text-align: center;
+    font-size: 15px;
+    color: red;
+    margin-top: 2%;
+}
+
+.field{
+    width: 100%;
+}
+
+textarea{
+    resize: none;
+}
+
+#lastBtn{
+    float: right;
+}
+
+#btnDo{
+    float: left;
+}
+
+.expandable{
+    width: 90%;
+    float: left;
+    margin-left: 3%;
+    overflow: auto;
+    max-height: 400px;
+    margin-top: 2%;
+}
+
+.example-radio-group {
+    flex-direction: row;
+    width: 90%;
+    margin-left: 3%;
+    margin-top: 3%;
+  }
+  
+  .example-radio-button {
+    margin-top: 3%;
+    margin-left:15%;
+  }
+
+  #prvi{
+    margin-left:5px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

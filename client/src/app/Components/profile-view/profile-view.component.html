@@ -1,0 +1,25 @@
+<div class="profileDataContent" *ngIf="!editTest">
+  <mat-list>
+    <mat-list-item><div class="textSite">Korisnicko ime:</div>
+      <div class="dataSite">{{ profileData.userName }}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Ime:</div>
+     <div class="dataSite">{{ profileData.ime.licnoIme }}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Prezime:</div>
+     <div class="dataSite">{{ profileData.ime.prezime }}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Adresa:</div>
+     <div class="dataSite">{{ profileData.adresaStanovanja.ulica }} {{profileData.adresaStanovanja.broj}}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Datum rodjenja:</div>
+     <div class="dataSite">{{ profileData.datumRodjenja |  date:'short'}}</div></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><div class="textSite">Rang naloga:</div>
+     <div class="dataSite">{{ profileData.RangProfila }}</div></mat-list-item>
+  </mat-list>
+</div>
+<div class="btnContainer" *ngIf="!editTest && rang!=0">
+<button mat-raised-button (click)="editData()" color="primary">Izmeni podatke</button>
+</div>
+<app-izmena-profila-user *ngIf="editTest"></app-izmena-profila-user>
